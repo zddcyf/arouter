@@ -1,0 +1,4 @@
+include ':app'
+include ':navCompiler'
+include ':navAnnotation'
+rootProject.name = "router"

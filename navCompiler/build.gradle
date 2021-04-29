@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //在其他module中会使用，所以依赖类型为api
+//    implementation 'com.google.auto.service:auto-service:1.0-rc6'
+    implementation rootProject.ext.dependencies["autoService"]
+    annotationProcessor rootProject.ext.dependencies["autoService"]
+    implementation project(':navAnnotation')
+
+    implementation rootProject.ext.dependencies["fastjson"]
+}
+
+sourceCompatibility = rootProject.ext.compileOptions.sourceCompatibility
+targetCompatibility = rootProject.ext.compileOptions.targetCompatibility
