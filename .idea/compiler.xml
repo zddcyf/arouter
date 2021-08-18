@@ -20,6 +20,8 @@
         <module name="arouter.navCompiler" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="arouter.app" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
